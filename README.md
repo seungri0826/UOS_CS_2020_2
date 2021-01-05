@@ -3,14 +3,14 @@
 
 ### [71022] 소프트웨어응용
 - Term Project
-  - AI 스마트 시티
-  - 동대문구 내 공공자전거 따릉이 대여소 방역 스케줄 추천 서비스
-  - [LINK]()
+  - AI 스마트 시티 \- **동대문구 내 공공자전거 따릉이 대여소 방역 스케줄 추천 서비스**
+  - [LINK](https://github.com/seungri0826/UOS_CS_2020_2/tree/main/Software_Application)
+  </br><img src="/Software_Application/img/service.JPG"  width=70% height=70%>
   
 ### [71049] 임베디드시스템설계
 - Term Project
   - 자율주행자동차 제작 (OpenCV)
-  - [LINK]()
+  - [LINK](https://github.com/seungri0826/UOS_CS_2020_2/tree/main/Embedded_Systems_Design)
   
 ### [71032] 소프트웨어공학
 - Term Project
