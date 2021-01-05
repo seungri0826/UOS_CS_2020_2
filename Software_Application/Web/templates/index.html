@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Seoul Bike Disinfection Scheduler</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{{url_for('static', filename='css/mdb.min.css')}}" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="{{url_for('static', filename='css/style.min.css')}}" rel="stylesheet">
+  <!-- 나눔 바른 고딕 웹 폰트 적용하기 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css">
+  <style type="text/css">
+
+    html,
+    body,
+    header,
+    .carousel {
+      height: 100%;
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #1C2331!important;
+            }
+        }
+
+    .hangul {
+        font-family: 'Nanum Barun Gothic' !important;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="#" target="_blank">
+        <strong class="hangul">2020-2학기 소프트웨어응용 프로젝트</strong>
+      </a>
+      <a class="navbar-brand" href="#" target="_blank">
+        <strong class="hangul">[10조]</10></strong>
+      </a>
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><strong>Home</strong>
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <a href="https://www.facebook.com/seungri0826" class="nav-link" target="_blank">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.instagram.com/seungri0826/" class="nav-link" target="_blank">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://github.com/seungri0826/" class="nav-link border border-light rounded"
+              target="_blank">
+              <i class="fa fa-github mr-2"></i>GitHub
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!--Carousel Wrapper-->
+  <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+      <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+
+      <!--First slide-->
+      <div class="carousel-item active">
+        <div class="view">
+
+          <!--Video source-->
+          <video class="video-intro" autoplay loop>
+            <source src="https://mdbootstrap.com/img/video/city.mp4" type="video/mp4" >
+          </video>
+
+          <!-- Mask & flexbox options-->
+          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            <!-- Content -->
+            <div class="text-center white-text mx-5 wow fadeIn">
+              <h1 class="mb-4">
+                <strong style="font-family: 'Nanum Barun Gothic'">동대문구 내 공공자전거 따릉이 대여소 방역 스케줄 추천 서비스</strong>
+              </h1>
+
+              <p>
+                <strong style="font-family: 'Nanum Barun Gothic'">코로나19의 확산으로 인해 서울특별시 공공자전거 따릉이의 이용 건수가 전년 동기간 대비 67% 증가하였습니다.</strong>
+              </p>
+
+              <p class="mb-4 d-none d-md-block">
+                <strong>시민들의 보다 안전한 따릉이 사용을 위해 다음 날의 동대문구 내 따릉이 대여소의 시간대별 유입 및 유출 정도를 예측하여 효율적인 따릉이 방역 시간대를 추천합니다.</strong>
+              </p>
+
+              <a target="_blank" href="https://github.com/seungri0826/" class="btn btn-outline-white btn-lg">LET'S GO GITHUB
+                <i class="fa fa-graduation-cap ml-2"></i>
+              </a>
+            </div>
+            <!-- Content -->
+
+          </div>
+          <!-- Mask & flexbox options-->
+
+        </div>
+      </div>
+      <!--/First slide-->
+
+      <!--Second slide-->
+      <div class="carousel-item">
+        <div class="view">
+
+          <!--Video source-->
+          <video class="video-intro" autoplay loop>
+              <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4">
+          </video>
+
+          <!-- Mask & flexbox options-->
+          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            <!-- Content -->
+            <div class="text-center white-text mx-5 wow fadeIn">
+              <h1 class="mb-4">
+                <strong style="font-family: 'Nanum Barun Gothic'">동대문구 내 공공자전거 따릉이 대여소 방역 스케줄 추천 서비스</strong>
+              </h1>
+
+              <p>
+                <strong style="font-family: 'Nanum Barun Gothic'">코로나19의 확산으로 인해 서울시 공공자전거 따릉이의 이용 건수가 전년 동기간 대비 67% 증가하였습니다.</strong>
+              </p>
+
+              <p class="mb-4 d-none d-md-block">
+                <strong>시민들의 보다 안전한 따릉이 사용을 위해 다음 날의 동대문구 내 따릉이 대여소의 시간대별 유입 및 유출 정도를 예측하여 효율적인 따릉이 방역 시간대를 추천합니다.</strong>
+              </p>
+
+              <a target="_blank" href="https://github.com/seungri0826/" class="btn btn-outline-white btn-lg">LET'S GO GITHUB
+                <i class="fa fa-graduation-cap ml-2"></i>
+              </a>
+            </div>
+            <!-- Content -->
+
+          </div>
+          <!-- Mask & flexbox options-->
+
+        </div>
+      </div>
+      <!--/Second slide-->
+
+      <!--Third slide-->
+      <div class="carousel-item">
+        <div class="view">
+
+          <!--Video source-->
+          <video class="video-intro" autoplay loop>
+              <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4">
+          </video>
+
+          <!-- Mask & flexbox options-->
+          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            <!-- Content -->
+            <div class="text-center white-text mx-5 wow fadeIn">
+              <h1 class="mb-4">
+                <strong style="font-family: 'Nanum Barun Gothic'">동대문구 내 공공자전거 따릉이 대여소 방역 스케줄 추천 서비스</strong>
+              </h1>
+
+              <p>
+                <strong style="font-family: 'Nanum Barun Gothic'">코로나19의 확산으로 인해 서울시 공공자전거 따릉이의 이용 건수가 전년 동기간 대비 67% 증가하였습니다.</strong>
+              </p>
+
+              <p class="mb-4 d-none d-md-block">
+                <strong>시민들의 보다 안전한 따릉이 사용을 위해 다음 날의 동대문구 내 따릉이 대여소의 시간대별 유입 및 유출 정도를 예측하여 효율적인 따릉이 방역 시간대를 추천합니다.</strong>
+              </p>
+
+              <a target="_blank" href="https://github.com/seungri0826/" class="btn btn-outline-white btn-lg">LET'S GO GITHUB
+                <i class="fa fa-graduation-cap ml-2"></i>
+              </a>
+            </div>
+            <!-- Content -->
+
+          </div>
+          <!-- Mask & flexbox options-->
+
+        </div>
+      </div>
+      <!--/Third slide-->
+
+    </div>
+    <!--/.Slides-->
+
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+
+  </div>
+  <!--/.Carousel Wrapper-->
+
+  <!--Main layout-->
+  <main>
+    <div class="container">
+
+      <!--Section: Main info-->
+      <section class="mt-5 wow fadeIn">
+
+        <!--Grid row-->
+        <div class="row">
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <img src="{{url_for('static', filename='img/xgboost_graph.png')}}" class="img-fluid center-block" alt="">
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <!-- Main heading -->
+            <h4 class="h4 mb-4" style="font-family: 'Nanum Barun Gothic'">따릉이 대여소의 시간대별 유입 및 유출 정도 예측 모델</h4>
+            <p style="font-family: 'Nanum Barun Gothic'">
+              XGBoost Regression 모델을 확장하여 <strong>동대문구 내 각 따릉이 대여소의 시간대별 유입 및 유출 정도</strong>를 예측하고 학습 결과를 확인했습니다.<br><br>
+              2019-01-01 ~ 2020-06-30 기간 동안의 서울특별시 공공자전거 대여정보 이력과 서울특별시 일별 기상관측 자료를 활용하여 <strong>평균 MAE 1.045</strong> 정도의 오차율을 보이는 예측 모델을 개발했습니다.</p>
+            <p></p>
+            <!-- Main heading -->
+
+            <hr>
+
+            <p style="font-family: 'Nanum Barun Gothic'">
+              학습된 모델은 다음 날의 <strong>월, 요일, 기온, 강수량, 풍속, 습도</strong>를 입력 받아 각 대여소의 시간대별 유입 및 유출 정도를 예측합니다.<br><br>
+              모델에 의해 예측된 다음 날 05 ~ 21시의 유입 및 유출 정도를 토대로 다음 날 06 ~ 22시의 방역 스케줄을 추천합니다. 두 개의 팀이 방역에 참여한다고 가정합니다.
+            </p>
+
+            <!-- CTA -->
+            <a target="_blank" href="https://github.com/seungri0826/"
+              style="font-family: 'Nanum Barun Gothic'" class="btn btn-grey btn-md"><strong>프로젝트 제출물 다운로드</strong>
+              <i class="fa fa-download ml-1"></i>
+            </a>
+
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+      </section>
+      <!--Section: Main info-->
+
+      <hr class="my-5">
+
+      <!--Section: Main features & Quick Start-->
+      <section>
+
+        <h4 class="h4 text-center mb-5" style="font-family: 'Nanum Barun Gothic'">다음 날의 동대문구 내 따릉이 대여소의 시간대별 유입 및 유출 정도 예측해보기</h4>
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 px-4">
+
+            <form action="/" method="post" autocomplete="off">
+              <!-- Default form group -->
+
+                  <!-- Default input -->
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">월</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" name="mon" class="form-control" id="formGroupExampleInput" placeholder="다음 날이 포함된 월을 입력하세요. [1, ..., 12]">
+                  </div>
+                  <!-- Default input -->
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">요일</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" name="day" class="form-control" id="formGroupExampleInput" placeholder="다음 날의 요일을 입력하세요. [월요일 = 0, ..., 일요일 = 6]">
+                  </div>
+                  <!-- Default input -->
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">최저 기온(°C)</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="min_temp" class="form-control" id="formGroupExampleInput" placeholder="최저 기온을 입력하세요.">
+                  </div>
+                  <!-- Default input -->
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">최고 기온(°C)</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="max_temp" class="form-control" id="formGroupExampleInput" placeholder="최고 기온을 입력하세요.">
+                  </div>
+                  <!-- Default input -->
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">일 강수량(mm)</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="rain_fall" class="form-control" id="formGroupExampleInput" placeholder="일 강수량을 입력하세요.">
+                  </div>
+                  <!-- Default input -->
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">최대 풍속(m/s)</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="wind_speed" class="form-control" id="formGroupExampleInput" placeholder="최대 풍속을 입력하세요.">
+                  </div>
+                  <!-- Default input -->
+                  <div class="form-group">
+                    <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">평균 습도(%)</label>
+                    <input style="font-family: 'Nanum Barun Gothic'" type="text" name="humidity" class="form-control" id="formGroupExampleInput" placeholder="평균 습도를 입력하세요.">
+                  </div>
+              <!-- Default form group -->
+              <button style="font-family: 'Nanum Barun Gothic' !important;" type="submit" class="btn btn-primary btn-md pull-right"><strong>결과 확인하기</strong></button>
+
+            </form>
+
+          </div>
+          <!--/Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12">
+
+            <p class="h5 text-center mb-4" style="font-family: 'Nanum Barun Gothic'">API로 불러온 다음 날(<strong>{{ tomorrow }}</strong>)의 기상 정보</p>
+            <p class="h7 text-center mb-4" style="font-family: 'Nanum Barun Gothic'"><span style="color:rgb(148, 148, 148);">※ 매일 오전 05시 30분 경에 업데이트됩니다.</span></p>
+            <br><br><br>
+            <h6 class="text-center mt-3"><strong>> 월: <span style="color: rgb(37, 142, 212);">{{ mon_tomorrow }}</span></strong></h6>
+            <h6 class="text-center mt-3"><strong>> 요일: <span style="color: rgb(37, 142, 212);">{{ day_tomorrow }}</span></strong></h6>
+            <h6 class="text-center mt-3"><strong>> 최저 기온(°C): <span style="color: rgb(37, 142, 212);">{{ min_temp_tomorrow }}</span></strong></h6>
+            <h6 class="text-center mt-3"><strong>> 최고 기온(°C): <span style="color: rgb(37, 142, 212);">{{ max_temp_tomorrow }}</span></strong></h6>
+            <h6 class="text-center mt-3"><strong>> 일 강수량(mm): <span style="color:rgb(37, 142, 212);">{{ rain_fall_tomorrow }}</span></strong></h6>
+            <h6 class="text-center mt-3"><strong>> 최대 풍속(m/s): <span style="color:rgb(37, 142, 212);">{{ wind_speed_tomorrow }}</span></strong></h6>
+            <h6 class="text-center mt-3"><strong>> 평균 습도(%): <span style="color: rgb(37, 142, 212);">{{ humidity_tomorrow }}</span></strong></h6>
+          </div>
+          <!--/Grid column-->
+
+        </div>
+        <!--/Grid row-->
+
+      </section>
+
+
+      <hr class="my-5">
+
+      <section>
+
+        
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+          <!--Grid column-->
+          <div class="col-md-12">
+
+            <p class="h4 text-center mb-4" style="font-family: 'Nanum Barun Gothic'">예상 유입 정도 Heatmap</p>
+            <p class="h6 text-center mb-4" style="font-family: 'Nanum Barun Gothic'"><span style="color:rgb(148, 148, 148);">※ 밝은 색일수록 유입 정도가 큰 시간대입니다.</span></p>
+            {% if heatmap_path %}
+              <img src="{{url_for('static', filename=heatmap_path)}}" class="img-fluid center-block" alt="">
+            {% endif %}
+          </div>
+          <!--/Grid column-->
+
+        </div>
+        <!--/Grid row-->
+
+      </section>
+
+      <hr class="my-5">
+
+      <section>
+
+        
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12">
+
+            <p class="h4 text-center mb-4" style="font-family: 'Nanum Barun Gothic'">추천 방역 스케줄</p>
+            <p class="h7 text-center mb-4" style="font-family: 'Nanum Barun Gothic'"><span style="color:rgb(148, 148, 148);">※ {'시간대': ['대여소ID-1', '대여소ID-2'], ...} 형식입니다.</span></p>
+            {% if team_A %}
+              <h5 class="text-left mt-3"><br><strong>> A 팀의 추천 방역 스케줄은 다음과 같습니다.</strong></h5>
+              <h6 class="text-left mt-3">{{ team_A }}<br></h6>
+            {% endif %}
+            {% if team_B %}
+              <h5 class="text-left mt-3"><strong>> B 팀의 추천 방역 스케줄은 다음과 같습니다.</strong></h5>
+              <h6 class="text-left mt-3">{{ team_B }}<br><br></h6>
+            {% endif %}
+          </div>
+          <!--/Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12">
+
+            <p class="h4 text-center mb-4" style="font-family: 'Nanum Barun Gothic'">예상 유효 소독 대수</p>
+            {% if disinfected_day %}
+              <h5 class="text-center mt-3"><br><br><br><br><br><br> <strong>약 <span style="color: rgb(37, 142, 212);">{{ disinfected_day }}</span> 대</strong></h5>
+            {% endif %}
+          </div>
+          <!--/Grid column-->
+
+        </div>
+        <!--/Grid row-->
+
+      </section>
+      <!--Section: Main features & Quick Start-->
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+    <!--Call to action-->
+    <div class="pt-4">
+      <a class="btn btn-outline-white" href="https://github.com/seungri0826/" target="_blank" role="button">LET'S GO GITHUB
+        <i class="fa fa-graduation-cap ml-2"></i>
+      </a>
+    </div>
+    <!--/.Call to action-->
+
+    <hr class="my-4">
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2020 Copyright:
+      <a href="https://keep-on-seungriing.tistory.com/" target="_blank"> 유승리 </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/mdb.min.js')}}"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
+</body>
+
+</html>
