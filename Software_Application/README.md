@@ -1,7 +1,12 @@
 # 소프트웨어응용 Term Project
-- AI 스마트 시티 \- **동대문구 내 공공자전거 따릉이 대여소 방역 스케줄 추천 서비스**
-  - [데모 영상](https://o365uos-my.sharepoint.com/:v:/g/personal/2018920031_office_uos_ac_kr/EXPsSROFANpMg5EbwKQlg1sBpirYUll2ohxnBkqpdTiKag?e=GQ5Pnk)
+
+- **프로젝트 주제** - 동대문구 내 공공자전거 따릉이 대여소 방역 스케줄 추천 서비스
+- **기획 배경**
+  <p><img src="https://user-images.githubusercontent.com/43572543/158913945-f51dc8bd-f773-4562-a2c6-0c2d12365502.png" width=65% height=65%></p>
+- **최종 발표 자료** - [LINK](https://github.com/seungriyou/cs-2020-2/blob/main/Software_Application/project_ppt.pdf)
+- **데모 영상** - [LINK](https://o365uos-my.sharepoint.com/:v:/g/personal/2018920031_office_uos_ac_kr/EXPsSROFANpMg5EbwKQlg1sBpirYUll2ohxnBkqpdTiKag?e=GQ5Pnk)
+- **웹 서비스 스크린샷**
   - 시작 화면
-  </br><img src="/Software_Application/img/Seoul-Bike-Disinfection-Scheduler.png"  width=80% height=80%>
+    <p><img src="/Software_Application/img/Seoul-Bike-Disinfection-Scheduler.png"  width=70% height=70%></p>
   - 결과 화면
-  </br><img src="/Software_Application/img/Seoul-Bike-Disinfection-Scheduler2.png"  width=80% height=80%>
+    <p><img src="/Software_Application/img/Seoul-Bike-Disinfection-Scheduler2.png"  width=70% height=70%></p>
